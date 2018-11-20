@@ -1,30 +1,38 @@
-// Navbar
-.navbar-custom {
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    .navbar-brand {
-    	font-family: $JoSlab;
-    	font-size: 30px;
-    	font-weight: 600;
-    	color: $primary;
-    }
-    .navbar-nav {
-    	.nav-link {
-    		color: $white;
-    		margin: 0 3px;
-    		&:hover, &:focus {
-    			color: $primary;
-    		}
-    	}
-    }
+// All
+
+// Body
+body {
+	color: #454545;
+	font-family: $JoSans;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
+
 a, .btn {
 	transition: all .3s;
 }
+
+h1,h2,h3,h4 {
+	font-weight: bold;
+}
+
+// Section-header
+.section-header {
+	text-align: center;
+	margin-bottom: 40px;
+	h2 {
+		color: $primary;
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+	p {
+		color: #606060;
+		font-size: 20px;
+	    font-style: italic;
+	}
+}
+
 // Button
 .btn-primary {
 	color: $white;
@@ -40,12 +48,28 @@ a, .btn {
 	}
 }
 
-// Body
-body {
-	font-family: $JoSans;
-	font-size: 16px;
-		-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+// Navbar
+.navbar-custom {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    .navbar-brand {
+    	font-family: $Pacifico;
+    	font-size: 30px;
+    	color: $primary;
+    }
+    .navbar-nav {
+    	.nav-link {
+    		color: $white;
+    		margin: 0 3px;
+    		&:hover, &:focus {
+    			color: $primary;
+    		}
+    	}
+    }
 }
 
 // Hero
@@ -77,11 +101,36 @@ body {
 		font-family: $JoSlab;
 		font-size: 2.5em;
 		b {
+			font-family: $Pacifico;
+			font-weight: 400;
 			color: $primary;
 		}
 	}
 	p {
 		font-size: 3em;
 		font-weight: bold;
+	}
+}
+
+// Services
+.services {
+	padding: 60px 0;
+	.item {
+		text-align: center;
+		h3 {
+			color: $secondary;
+		}
+		.image {
+			background-size: cover;
+			background-position: center center;
+			border-radius: 50%;
+			height: 220px;
+			width: 220px;
+			margin: 0 auto 30px;
+		}
+		p {
+			max-width: 285px;
+			margin: 0 auto 30px;
+		}
 	}
 }
