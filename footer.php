@@ -18,6 +18,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 </div><!-- #page we need this extra closing tag here -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js"></script>
 
 <?php wp_footer(); ?>
 
