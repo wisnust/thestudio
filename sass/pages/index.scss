@@ -1,0 +1,79 @@
+// Navbar
+.navbar-custom {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    .navbar-brand {
+    	font-family: $JoSlab;
+    	font-size: 30px;
+    	font-weight: 600;
+    	color: $primary;
+    }
+    .navbar-nav {
+    	.nav-link {
+    		color: $white;
+    		margin: 0 3px;
+    		&:hover, &:focus {
+    			color: $primary;
+    		}
+    	}
+    }
+}
+a, .btn {
+	transition: all .3s;
+}
+// Button
+.btn-primary {
+	border-radius: 2px;
+	padding: 12px 20px 8px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+// Body
+body {
+	font-family: $JoSans;
+	font-size: 16px;
+		-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Hero
+.hero {
+	background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	&:before {
+		background-color: rgba(black, .7);
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	> .container {
+		position: relative;
+		z-index: 5;
+	}
+	h2 {
+		font-family: $JoSlab;
+		font-size: 2.5em;
+		b {
+			color: $primary;
+		}
+	}
+	p {
+		font-size: 3em;
+		font-weight: bold;
+	}
+}
