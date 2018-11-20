@@ -17,6 +17,10 @@ h1,h2,h3,h4 {
 	font-weight: bold;
 }
 
+input, .form-control {
+	border-radius: 2px;
+}
+
 // Section-header
 .section-header {
 	text-align: center;
@@ -34,7 +38,7 @@ h1,h2,h3,h4 {
 }
 
 // Button
-.btn-primary {
+.btn-primary, #wpcf7-f60-o1.wpcf7 input[type=submit] {
 	color: $white;
 	background-color: $secondary;
 	border-radius: 2px;
@@ -42,6 +46,7 @@ h1,h2,h3,h4 {
 	padding: 12px 20px 8px;
 	text-transform: uppercase;
 	font-weight: bold;
+	height: auto;
 	&:hover, &:focus {
 		background-color: darken($secondary, 5%);
 		color: $white;
@@ -147,6 +152,63 @@ h1,h2,h3,h4 {
 		p {
 			max-width: 285px;
 			margin: 0 auto 30px;
+		}
+	}
+}
+
+// Contact
+.contact {
+	background-size: cover;
+	background-position: center center;
+	padding: 60px 0;
+	position: relative;
+	.section-header {
+		p {
+			color: $white;
+		}
+	}
+	&:before {
+		background-color: rgba(#212121, .8);
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	> .container {
+		position: relative;
+		z-index: 5;
+	}
+	.wpcf7 {
+		.wpcf7-form {
+			p {
+				label {
+					color: $white;
+				}
+				&:first-of-type {
+					width: 50%;
+					float: left;
+					position: relative;
+					left: -5px;
+					label {
+						padding: 0 5px;
+					}
+				}
+				&:nth-of-type(2) {
+					width: 50%;
+					float: left;
+					position: relative;
+					right: -5px;
+					label {
+						padding: 0 5px;
+					}
+				}
+			}
+			.wpcf7-response-output {
+				color: $white;
+			}
 		}
 	}
 }

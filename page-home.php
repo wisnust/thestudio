@@ -82,6 +82,7 @@ get_header();
 												<p><?php echo $services_item_2['item_subheading']; ?></p>
 											</div>
 										<?php endif; ?>
+
 									</div>
 									<div class="col-md-4">
 										<?php
@@ -98,6 +99,26 @@ get_header();
 								</div>
 							</div>
 						</div>
+					</section>
+
+					<!-- CONTACT -->
+					<?php 
+					
+					$contact = get_field('contact');
+					
+					if ( $contact ): ?>
+
+					<section id="contact" class="contact" style="background-image: url('<?php echo $contact['background_image']['url'] ?>')">
+
+						<div class="container">
+							<div class="section-header">
+								<h2><?php echo $contact['contact_heading'] ?></h2>
+								<p><?php echo $contact['contact_subheading'] ?></p>
+							</div>
+							<?php echo do_shortcode( '[contact-form-7 id="60" title="Contact form 1"]' ); ?>
+						</div>
+
+						<?php endif; ?>
 					</section>
 
 				</main><!-- #main -->
