@@ -65,8 +65,24 @@ h1,h2,h3,h4 {
     	.nav-link {
     		color: $white;
     		margin: 0 3px;
+    		position: relative;
+    		&:before {
+				content: "";
+				display: block;
+				height: 0px;
+				background-color: $primary;
+				position: absolute;
+				bottom: 9px;
+				left: 9px;
+				right: 7px;
+				opacity: 0;
+				transition: all .3s;
+    		}
     		&:hover, &:focus {
-    			color: $primary;
+    			&:before {
+    				opacity: 1;
+    				height: 3px;
+    			}
     		}
     	}
     }
