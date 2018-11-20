@@ -30,6 +30,8 @@ get_header();
 
 					if( !empty($image) ): ?>
 
+
+					<!-- HERO HOME -->
 					<section class="hero hero-home" style="background-image: url('<?php echo $image["url"]; ?>')">
 
 					<?php endif; ?>
@@ -42,9 +44,59 @@ get_header();
 
 							if( $link ): ?>
 								
-								<a class="btn btn-primary" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+								<a class="btn btn-primary outline" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 
 							<?php endif; ?>
+						</div>
+					</section>
+
+					<!-- SERVICES -->
+					<section id="services" class="services">
+						<div class="container">
+							<div class="section-header">
+								<h2><?php the_field('services_heading') ?></h2>
+								<p><?php the_field('services_subheading') ?></p>
+							</div>
+							<div class="content">
+								<div class="row">
+									<div class="col-md-4">
+										<?php
+										$services_item_1 = get_field('services_item_1');	
+
+										if( $services_item_1 ): ?>
+											<div class="item">
+												<div class="image" style="background-image: url(<?php echo $services_item_1['item_image']['url']; ?>)"></div>
+												<h3><?php echo $services_item_1['item_heading']; ?></h3>
+												<p><?php echo $services_item_1['item_subheading']; ?></p>
+											</div>
+										<?php endif; ?>
+									</div>
+									<div class="col-md-4">
+										<?php
+										$services_item_2 = get_field('services_item_2');	
+
+										if( $services_item_2 ): ?>
+											<div class="item">
+												<div class="image" style="background-image: url(<?php echo $services_item_2['item_image2']['url']; ?>)"></div>
+												<h3><?php echo $services_item_2['item_heading']; ?></h3>
+												<p><?php echo $services_item_2['item_subheading']; ?></p>
+											</div>
+										<?php endif; ?>
+									</div>
+									<div class="col-md-4">
+										<?php
+										$services_item_3 = get_field('services_item_3');	
+
+										if( $services_item_3 ): ?>
+											<div class="item">
+												<div class="image" style="background-image: url(<?php echo $services_item_3['item_image']['url']; ?>)"></div>
+												<h3><?php echo $services_item_3['item_heading']; ?></h3>
+												<p><?php echo $services_item_3['item_subheading']; ?></p>
+											</div>
+										<?php endif; ?>
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
 

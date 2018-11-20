@@ -27,10 +27,17 @@ a, .btn {
 }
 // Button
 .btn-primary {
+	color: $white;
+	background-color: $secondary;
 	border-radius: 2px;
+	border: 0;
 	padding: 12px 20px 8px;
 	text-transform: uppercase;
 	font-weight: bold;
+	&:hover, &:focus {
+		background-color: darken($secondary, 5%);
+		color: $white;
+	}
 }
 
 // Body
@@ -51,8 +58,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	position: relative;
 	&:before {
-		background-color: rgba(black, .7);
+		background-color: rgba(#212121, .7);
 		display: block;
 		content: "";
 		position: absolute;
