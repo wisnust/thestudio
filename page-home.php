@@ -101,6 +101,50 @@ get_header();
 						</div>
 					</section>
 
+					<!-- WORKS -->
+					<?php 
+					
+					$works = get_field('works');
+					
+					if ( $works ): 
+
+					$works_item = get_sub_field('item');
+
+					?>
+
+					<section id="works" class="works">
+						<div class="container">
+							<div class="section-header">
+								<h2><?php echo $works['works_heading'] ?></h2>
+								<p><?php echo $works['works_subheading'] ?></p>
+							</div>
+							<div class="row">
+							<?php if( have_rows('works') ): ?>
+								<?php while( have_rows('works') ): the_row();  ?>
+									<?php if( have_rows('item') ): ?>
+										<?php while( have_rows('item') ): the_row(); 
+											// vars
+											$image = get_sub_field('image');
+											$title = get_sub_field('title');
+											$category = get_sub_field('category');
+										?>
+										<div class="col-sm-6 col-md-4">
+											<div class="item">
+												<div class="image" style="background-image: url('<?php echo $image['url']; ?>')"></div>
+												<h1><?php echo $title; ?></h1>
+												<p><?php echo $category; ?></p>
+											</div>
+										</div>
+										<?php endwhile; ?>
+									<?php endif; ?>
+								<?php endwhile; ?>
+							<?php endif; ?>
+							</div>
+						</div>
+					</section>
+
+					<?php endif; ?>
+
 					<!-- CONTACT -->
 					<?php 
 					
@@ -118,8 +162,9 @@ get_header();
 							<?php echo do_shortcode( '[contact-form-7 id="60" title="Contact form 1"]' ); ?>
 						</div>
 
-						<?php endif; ?>
 					</section>
+					
+					<?php endif; ?>
 
 				</main><!-- #main -->
 
