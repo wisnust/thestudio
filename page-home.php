@@ -131,8 +131,10 @@ get_header();
 										<div class="col-sm-6 col-md-4">
 											<div class="item">
 												<div class="image" style="background-image: url('<?php echo $image['url']; ?>')"></div>
-												<h1><?php echo $title; ?></h1>
-												<p><?php echo $category; ?></p>
+												<div class="content">
+													<h3><?php echo $title; ?></h3>
+													<p><?php echo $category; ?></p>
+												</div>
 											</div>
 										</div>
 										<?php endwhile; ?>
